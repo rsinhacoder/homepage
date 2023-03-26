@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./assets/css/carousel.css" />
+    <title>SEO Website</title>
+  </head>
+  <body>
+    <navbar class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid mt-2 px-md-5 mt-sm-3 mb-3">
+        <a class="navbar-brand me-5" href="#">MIKALTO ></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="ms-lg-5 collapse navbar-collapse"
+          id="navbarSupportedContent"
+        >
+          <ul
+            class="navbar-nav me-auto ml-0 mb-2 mb-lg-0 d-flex flex-column flex-sm-row gap-3"
+          >
+            <li class="nav-item navbar-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item navbar-item">
+              <a class="nav-link" href="#">Our Rooms</a>
+            </li>
+            <li class="nav-item navbar-item">
+              <a class="nav-link" href="#">Page</a>
+            </li>
+            <li class="nav-item navbar-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item navbar-item">
+              <a class="nav-link" href="#">Blogs</a>
+            </li>
+            <li class="nav-item navbar-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              EN
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">RUS</a></li>
+              <li><a class="dropdown-item" href="#">GER</a></li>
+              <li><a class="dropdown-item" href="#">SPA</a></li>
+            </ul>
+          </div>
+
+          <button class="btn px-4" type="submit">
+            <i class="fa-sharp fa-solid fa-bag-shopping shopIcon"></i>
+          </button>
+        </div>
+      </div>
+    </navbar>
+
+    <section
+      class="container d-flex mainsection bg-danger px-md-5 px-2 mx-md-5 hero mt-2 mt-sm-3"
+    >
+      <div class="row d-flex align-self-end formsection bg-inherit">
+        <h1>
+          Enjoy your <br />
+          dream vacation
+        </h1>
+        <h6>Quiet and endlessly beautiful hideaway</h6>
+        <button>About US</button>
+        <div class="formBox d-flex container-fluid flex-column gap-3">
+          <form class="formDetails">
+            <h1>Search Room</h1>
+            <br />
+            <h6 class="subheading">Get the latest on our covid 19 response</h6>
+
+            <div class="form-group d-flex gap-2 formData">
+              <div>
+                <i class="fa-regular fa-calendar"></i>
+                Check-in
+                <input
+                  id="dp1"
+                  type="date"
+                  class="form-control clickable input-md"
+                  id="DtChkIn"
+                  placeholder="&#xf133;  Check-In"
+                />
+              </div>
+              <div>
+                <i class="fa-regular fa-calendar"></i>
+                Check-Out
+
+                <input
+                  id="dp2"
+                  type="date"
+                  class="form-control clickable input-md"
+                  id="DtChkOut"
+                  placeholder="&#xf133;  Check-Out"
+                />
+              </div>
+            </div>
+
+            <div class="form-group gap-3">
+              
+                <i class="fa-solid fa-user mr-2"></i>
+                <label>Adults</label>
+              <select
+                class="form-control"
+                id="person_number"
+                onchange="finalCost()"
+              >
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <i class="fa-sharp fa-regular fa-child-dress"></i>
+              <label>Children</label>
+              <select
+                class="form-control"
+                id="child_number"
+                onchange="finalCost()"
+              >
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+            </div>
+
+            <button class="availability">Check Availability</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="container bg-warning d-flex gap-5 px-md-5 px-2 mx-md-5 hero mt-2 mt-sm-3 mainsection">
+      <div class="d-flex flex-column align-items-center justify-content-end bg-inherit contentSection">
+       <h3>WELCOME TO</h3>
+       
+        <h1>
+          The Mikato Luxury<br />
+          and comfort homestay
+        </h1>
+        <h6>Lorem ipsum dolor sit amet. Eos tempore inventore rem rerum velit qui autem obcaecati et mollitia illum? Et vero ipsa 33 nihil ratione ea consequatur sequi sed omnis dolorum eos possimus illum nam voluptate</h6>
+        <div><img src="https://www.kulfiy.com/wp-content/uploads/Mahendra-Singh-Dhoni-Autograph-.png" />
+        Mahendra Singh Dhoni</div>
+        </div>
+<div class="bg-success imageSection">
+hello
+</div>
+<div class="bg-danger imageSection2">
+  hello
+  </div>
+  <div class="bg-success-subtle imageSection3">
+    hello
+    </div>
+
+
+      </section>
+
+      
+    <section class="container bg-success d-flex gap-5 px-md-5 px-2 mx-md-5 hero mt-2 mt-sm-3 mainsection">
+      <body>
+        <div class="sliderContainer">
+<div class="leftSlide">
+<div style="background-color : pink">
+  <h5>Elegant an comfortable</h5>
+<h1>Standard Room</h1>
+
+</div>
+<div style="background-color : gold">
+  <h5>Elegant an comfortable</h5>
+<h1>Executive Room</h1>
+
+</div>
+<div style="background-color : beige">
+  <h5>Elegant an comfortable</h5>
+<h1>Business Room</h1>
+
+</div>
+
+</div>
+<div class="rightSlide">
+
+<div style="background-image: url('https://www.tvinsider.com/wp-content/uploads/2022/09/milly-alcock-matt-smith.jpg');"></div>
+<div style="background-image: url('https://www.tvinsider.com/wp-content/uploads/2022/12/matt-smith-emma-d-arcy-house-of-the-dragon.jpg');"></div>
+<div style="background-image: url('https://www.tvinsider.com/wp-content/uploads/2022/09/milly-alcock-matt-smith.jpg');"></div>
+</div>
+<div class="actionButton">
+  <button class="downButton"> 
+    <i class="fas fa-arrow-down"></i>
+  </button>
+  <button class="upButton"> 
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</div>
+
+        </div>
+      </body>
+
+
+      </section>
+
+
+      
+    <section class="service-cards-container container-fluid">
+      <div class="row d-flex gap-5 justify-content-center">
+     
+        <div
+          class="social-media-management col-10 col-lg-3 d-flex flex-column align-items-center align-items-sm-start"
+        >
+          <div class="d-flex gap-2 flex-wrap">
+            <img
+              src="./assets/images/service card/social media management.svg"
+              alt=""
+            />
+            <h4
+              class="service-cards-heading text-wrap m-auto"
+              style="font-weight: 300"
+            >
+              Social Media<br />
+              Management
+            </h4>
+          </div>
+          <div class="service-cards-descriptions">
+            It is a long established fact that a reader will be distracted by
+            the readable content .It is a long established fact that.
+          </div>
+          <div class="d-flex justify-content-end">
+            <button class="service-cards-read-more-btn">
+              <i class="fa fa-arrow-alt-circle-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="social-media-management col-10 col-lg-3 d-flex flex-column align-items-center align-items-sm-start"
+        >
+          <div class="d-flex gap-2 flex-wrap">
+            <img src="./assets/images/service card/img.svg" alt="" />
+            <h4
+              class="service-cards-heading text-wrap m-auto"
+              style="font-weight: 300"
+            >
+              Email<br />
+              Marketting
+            </h4>
+          </div>
+          <div class="service-cards-descriptions">
+            It is a long established fact that a reader will be distracted by
+            the readable content .It is a long established fact that .
+          </div>
+          <div class="d-flex justify-content-end">
+            <button class="service-cards-read-more-btn">
+              <i class="fa fa-arrow-alt-circle-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="social-media-management col-10 col-lg-3 d-flex flex-column align-items-center align-items-sm-start"
+        >
+          <div class="d-flex gap-2 flex-wrap">
+            <img src="./assets/images/service card/seo management.svg" alt="" />
+            <h4
+              class="service-cards-heading text-wrap m-auto"
+              style="font-weight: 300"
+            >
+              SEO<br />
+              Management
+            </h4>
+          </div>
+          <div class="service-cards-descriptions">
+            It is a long established fact that a reader will be distracted by
+            the readable content .It is a long established fact that .
+          </div>
+          <div class="d-flex justify-content-end">
+            <button class="service-cards-read-more-btn">
+              <i class="fa fa-arrow-alt-circle-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+
+      <section class="container bg-secondary d-flex gap-5 px-md-5 px-2 mx-md-5 hero mt-2 mt-sm-3 mainsection">
+        <div class="container text-center m-0 p-0">
+          <div class="row row-cols-2">
+            <div class="col bg-black "><img class="object-fit-none p-0" src="https://www.tvinsider.com/wp-content/uploads/2022/12/matt-smith-emma-d-arcy-house-of-the-dragon.jpg" /></div>
+            <div class="col bg-black "><img class="object-fit-fill" src="https://www.tvinsider.com/wp-content/uploads/2022/09/milly-alcock-matt-smith.jpg" /></div>
+            <div class="col bg-black "><img class="object-fit-cover" src="https://www.tvinsider.com/wp-content/uploads/2022/09/milly-alcock-matt-smith.jpg" /></div>
+            <div class="col bg-black "><img class="object-fit-none" src="https://www.tvinsider.com/wp-content/uploads/2022/09/milly-alcock-matt-smith.jpg" /></div>
+          </div>
+        </div>
+</section>
+
+<section class="container bg-secondary d-flex gap-5 px-md-5 px-2 mx-md-5 hero mt-2 mt-sm-3 mainsection">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.043901925615!2d88.42922191488228!3d22.57746128518026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275a5466e0099%3A0x563fb49fb6394261!2sItobuz%20Technologies%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1679772734248!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+  </section>
+
+
+
+<script src="main.js"></script>
+  </body>
+</html>
